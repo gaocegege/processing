@@ -152,6 +152,7 @@ public class Base {
     if (debugFile.exists()) {
       DEBUG = true;
     }
+    DEBUG = true;
 
     // Use native popups so they don't look so crappy on OS X
     JPopupMenu.setDefaultLightWeightPopupEnabled(false);
@@ -415,7 +416,7 @@ public class Base {
 
   void buildCoreModes() {
     Mode javaMode =
-      ModeContribution.load(this, Platform.getContentFile("modes/java"),
+      ModeContribution.load(this, Platform.getContentFile("modes/RLangMode"),
                             getDefaultModeIdentifier()).getMode();
 
     // PDE X calls getModeList() while it's loading, so coreModes must be set
@@ -929,7 +930,7 @@ public class Base {
 
 
   String getDefaultModeIdentifier() {
-    return "processing.mode.java.JavaMode";
+    return "rprocessing.mode.RLangMode";
   }
 
 
