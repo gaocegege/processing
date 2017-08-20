@@ -280,6 +280,7 @@ public class AvailableContribution extends Contribution {
         version = Integer.parseInt(properties.get("version"));
       } catch (NumberFormatException e) {
         version = getVersion();
+        System.err.println(version);
         System.err.println("The version number for “" + name + "” is not a number.");
         System.err.println("Please contact the author to fix it according to the guidelines.");
       }
